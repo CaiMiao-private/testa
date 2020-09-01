@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && \
+RUN apt-get update && apt-get install -qy apt-utils &&\
     apt-get install -qy \
 	git \
 	build-essential \
@@ -26,7 +26,7 @@ RUN apt-get update && \
 	gperf \
 	python-docutils sudo
 
-RUN sudo apt install -qy unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
+RUN sudo apt-get install -qy unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
         cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
 
