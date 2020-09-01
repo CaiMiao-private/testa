@@ -1,8 +1,3 @@
-# Go cross compiler (xgo): Base cross-compilation layer
-# Copyright (c) 2014 Péter Szilágyi. All rights reserved.
-#
-# Released under the MIT license.
-
 FROM ubuntu:18.04
 
 RUN apt-get update && \
@@ -31,7 +26,7 @@ RUN apt-get update && \
 	gperf \
 	python-docutils sudo
 
-RUN sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
+RUN sudo apt install -qy unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
         cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
 
