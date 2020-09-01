@@ -34,6 +34,6 @@ RUN mkdir /opt/rt-n56u && chmod a+rwx /opt/rt-n56u
 
 RUN git clone https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
 
-RUN cd /opt/rt-n56u/toolchain-mipsel && ./build_toolchain
+RUN cd /opt/rt-n56u/toolchain-mipsel && sh dl_toolchain.sh
 
 #USER root
