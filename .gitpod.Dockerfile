@@ -29,7 +29,7 @@ RUN apt-get update && \
 	vim \
   	autopoint \
 	gperf \
-	python-docutils
+	python-docutils sudo
 
 RUN sudo apt install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
         cpio git python-docutils gettext automake autopoint texinfo build-essential help2man \
